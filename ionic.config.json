@@ -1,0 +1,7 @@
+{
+  "name": "Briyith's Closet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
