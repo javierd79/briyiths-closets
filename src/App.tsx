@@ -1,14 +1,15 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
+  // IonIcon,
+  // IonLabel,
+  // IonRouterOutlet,
+  // IonTabBar,
+  // IonTabButton,
+  // IonTabs,
   setupIonicReact
 } from '@ionic/react';
+import Menu from './components/Menu.jsx';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
@@ -37,8 +38,9 @@ import './theme/variables.css';
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
+  <IonApp
+  >
+    {/* <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/tab1">
@@ -69,7 +71,11 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-    </IonReactRouter>
+    </IonReactRouter> */}
+    <Menu
+      title="Briyith's Closet"
+    >
+    </Menu>
   </IonApp>
 );
 
