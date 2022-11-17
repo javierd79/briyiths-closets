@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { 
   IonButtons,
   IonContent,
@@ -10,13 +10,18 @@ import {
   IonToolbar
 } from '@ionic/react';
 
-function Menu(props, {children}) {
+type Props = {
+  title: string,
+  children?: React.ReactNode
+}
+
+const Menu: React.FC<Props> = ({children, title}) => {
   return (
     <>
       <IonMenu contentId="main-content">
         <IonHeader>
           <IonToolbar>
-            <IonTitle>{props.title}</IonTitle>
+            <IonTitle>{title}</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding">
@@ -29,7 +34,7 @@ function Menu(props, {children}) {
             <IonButtons slot="start">
               <IonMenuButton></IonMenuButton>
             </IonButtons>
-            <IonTitle>{props.title}</IonTitle>
+            <IonTitle>{title}</IonTitle>
           </IonToolbar>
         </IonHeader>
       </IonPage>

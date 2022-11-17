@@ -1,6 +1,7 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
+  IonButton,
   // IonIcon,
   // IonLabel,
   // IonRouterOutlet,
@@ -9,7 +10,8 @@ import {
   // IonTabs,
   setupIonicReact
 } from '@ionic/react';
-import Menu from './components/Menu.jsx';
+import Menu from './components/Menu';
+import CardText from './components/CardText';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
@@ -73,8 +75,18 @@ const App: React.FC = () => (
       </IonTabs>
     </IonReactRouter> */}
     <Menu
-      title="Briyith's Closet"
+      title="Briyith's Closet ❤️"
     >
+      <CardText
+        title="Descripcion"
+        subtitle="Descripcion de la aplicacion"
+        color="danger"
+      >
+        Esta aplicacion fue hecha para el uso diario y escoger vestimenta de la mujer
+      </CardText>
+      <IonButton style={{width: '100%'}}>
+        Hecha con ❤️ por Briyith 
+      </IonButton>
     </Menu>
   </IonApp>
 );
