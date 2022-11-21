@@ -12,6 +12,12 @@
 # /build
 
 # misc
+/yarn.lock
+
+# android
+/android
+
+# misc
 .DS_Store
 .env.local
 .env.development.local
