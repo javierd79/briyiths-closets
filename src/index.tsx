@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { IonSpinner } from '@ionic/react';
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
+
+const Application = lazy(() => import('./App'));
+
+const SkeletonLoading = () => {
+  return (
+    <>
+      <IonSpinner style={{top: "45vh", left:"45vw"}}></IonSpinner>
+    </>
+   );
+};
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={<SkeletonLoading/>}>
+      <Application />
+    </Suspense>
   </React.StrictMode>
 );
 

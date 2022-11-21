@@ -8,6 +8,9 @@ import {
   // IonTabBar,
   // IonTabButton,
   // IonTabs,
+  IonSlides, 
+  IonSlide, 
+  IonContent,
   setupIonicReact
 } from '@ionic/react';
 import Menu from './components/Menu';
@@ -54,6 +57,7 @@ import '@ionic/react/css/structure.css';
 import '@ionic/react/css/typography.css';
 
 /* Optional CSS utils that can be commented out */
+import './index.css';
 import '@ionic/react/css/padding.css';
 import '@ionic/react/css/float-elements.css';
 import '@ionic/react/css/text-alignment.css';
@@ -66,42 +70,14 @@ import './theme/variables.css';
 
 setupIonicReact();
 
+const slideOpts = {
+  initialSlide: 0,
+  speed: 300
+};
+
 const App: React.FC = () => (
-  <IonApp
-    style={{backgroundColor: "pink"}}
-  >
-    {/* <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
-          </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
-          </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/tab1" />
-          </Route>
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter> */}
+  <IonApp>
+  <IonContent className="ion-padding">
     <Menu
       title="Briyith's Closet ❤️"
     >
@@ -116,7 +92,18 @@ const App: React.FC = () => (
         Hecha con ❤️ por Briyith 
       </IonButton>
     </Menu>
-    <img src={Modelo} alt="modelito lima kid"/>
+      <IonSlides pager={false} options={slideOpts}>
+        <IonSlide>
+          <img src={Top1} alt="modelito lima kid" />
+        </IonSlide>
+        <IonSlide>
+          <img src={Top2} alt="modelito lima kid" />
+        </IonSlide>
+        <IonSlide>
+          <img src={Top3} alt="modelito lima kid" />
+        </IonSlide>
+      </IonSlides>
+    </IonContent>
   </IonApp>
 );
 

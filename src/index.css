@@ -1,0 +1,17 @@
+ion-slides {
+  height: 100%;
+}
+
+ion-content::part(background) {
+  background: pink;
+  background-image: url('./assets/img/modelo.png'); 
+  background-repeat: no-repeat;
+  background-size: fixed;
+  background-position: 50% 16%;
+}
+  /* background-repeat: "no-repeat";  */
+  /* background-size: "cover" */
+
+ion-content::part(scroll) {
+  color: #fff;
+}
