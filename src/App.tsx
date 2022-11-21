@@ -18,6 +18,33 @@ import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 
+// modelito lima kid 2022
+import Modelo from './assets/img/modelo.png';
+
+
+// ropa de modelito lima kid 2022
+
+//top
+import Top1 from './assets/img/top/top-1.png';
+import Top2 from './assets/img/top/top-2.png';
+import Top3 from './assets/img/top/top-3.png';
+import Top4 from './assets/img/top/top-4.png';
+import Top5 from './assets/img/top/top-5.png';
+
+//bottom
+import Bottom1 from './assets/img/bottom/bottom-1.png';
+import Bottom2 from './assets/img/bottom/bottom-2.png';
+import Bottom3 from './assets/img/bottom/bottom-3.png';
+import Bottom4 from './assets/img/bottom/bottom-4.png';
+import Bottom5 from './assets/img/bottom/bottom-5.png';
+
+//head
+import Head1 from './assets/img/top/head-1.png';
+import Head2 from './assets/img/top/head-2.png';
+import Head3 from './assets/img/top/head-3.png';
+import Head4 from './assets/img/top/head-4.png';
+import Head5 from './assets/img/top/head-5.png';
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -41,6 +68,7 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp
+    style={{backgroundColor: "pink"}}
   >
     {/* <IonReactRouter>
       <IonTabs>
@@ -82,12 +110,13 @@ const App: React.FC = () => (
         subtitle="Descripcion de la aplicacion"
         color="danger"
       >
-        Esta aplicacion fue hecha para el uso diario y escoger vestimenta de la mujer
+        Briyith's Closet esta diseñada para hacer la tarea de la vestimenta un poco diferente!<br/><br/> Acompañanos en esta experiencia!
       </CardText>
       <IonButton style={{width: '100%'}}>
         Hecha con ❤️ por Briyith 
       </IonButton>
     </Menu>
+    <img src={Modelo} alt="modelito lima kid"/>
   </IonApp>
 );
 
